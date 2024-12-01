@@ -23,6 +23,8 @@
   - [Parsing Headers](#parsing-headers)
   - [Authentication Parsing](#authentication-parsing)
 - [Tests](#tests)
+- [Supported cURL Features](#supported-curl-features)
+- [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -162,6 +164,22 @@ def test_parse_invalid_curl():
     except ValueError as e:
         assert str(e) == "Invalid HTTP method: INVALID"
 ```
+## Supported cURL Features
+| Feature         | cURL Flag     | Supported | Notes                          |
+|-----------------|---------------|-----------|--------------------------------|
+| HTTP Methods    | -X            | ✅         | Defaults to GET if not specified |
+| Headers         | -H            | ✅         | Parses multiple headers        |
+| Data/Body       | -d, --data    | ✅         | Supports JSON or form data     |
+| Authentication  | --user        | ✅         | Basic authentication           |
+| Cookies         | -b, --cookie  | ❌         | Planned                        |
+| File Upload     | -F, --form    | ❌         | Planned                        |
+| Proxies         | -x, --proxy   | ❌         | Planned                        |
+
+## Roadmap
+- Add support for cookies, file uploads, and proxies.
+- Handle multipart requests.
+- Extend testing coverage for edge cases.
+
 ## Contributing
 We welcome contributions to ReqCurl! If you have suggestions, fixes, or improvements, please fork the repository, make your changes, and submit a pull request.
 ### Steps to Contribute
