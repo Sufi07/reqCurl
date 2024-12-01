@@ -8,7 +8,7 @@ setup(
     long_description_content_type="text/markdown",
     author="Sufiyan Ali Iqbal",
     author_email="sufiyanaliiqbal@gmail.com",
-    url="https://github.com/your_username/reqcurl",
+    url="https://github.com/Sufi07/reqCurl",
     packages=find_packages(),
     install_requires=["requests"],
     python_requires=">=3.6",
